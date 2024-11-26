@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matrizes Energéticas - Explorando Fontes e Aplicações de Energia no Mundo">
+    <meta name="autor" content="Marlon/Maiara/Maria/Paula">
+    <title>Matrizes Energéticas</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <!-- SweetAlert2 para modais -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Estilos customizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="container">
+            <h1>Matrizes Energéticas Globais</h1>
+            <nav>
+                <ul>
+                    <li><a href="#introducao">Introdução</a></li>
+                    <li><a href="#infografico">Infográficos</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#calculadora">Calculadora</a></li>
+                    <li><a href="#comparacao">Comparação</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Introdução com Carrossel de Imagens -->
+    <section id="introducao">
+        <div class="container">
+            <h2>O que são Matrizes Energéticas?</h2>
+            <p>As matrizes energéticas representam a distribuição das fontes de energia utilizadas por um país, região ou setor. Elas são essenciais para o planejamento de políticas públicas e para a transição para fontes mais sustentáveis.</p>
+            <!-- Carrossel de Imagens -->
+            <div class="carousel">
+                <img src="img/solar 2.jpg" alt="Energia Solar">
+                <img src="img/eolica 2.jpg" alt="Energia Eólica">
+                <img src="img/hidreletrica 2.jpg" alt="Energia Hidrelétrica">
+            </div>
+        </div>
+    </section>
+
+    <!-- Infográficos Interativos -->
+    <section id="infografico">
+        <div class="container">
+            <h2>Infográficos Interativos</h2>
+            <p>Veja como as fontes de energia são distribuídas e entenda sua importância no desenvolvimento sustentável.</p>
+            <!-- Gráfico de Pizza -->
+            <div class="grafico">
+                <canvas id="energyPieChart"></canvas>
+            </div>
+            <!-- Vídeo Explicativo -->
+            <div class="video-container">
+                <iframe src="https://youtu.be/ZLiO4FdxTqk?si=Zg6i51fECsBEqHL3" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparação entre Matrizes Energéticas -->
+    <section id="comparacao">
+        <div class="container">
+            <h2>Comparação entre Matrizes Energéticas</h2>
+            <p>Explore como diferentes países distribuem suas fontes de energia.</p>
+            <button onclick="showComparison()">Ver Comparação</button>
+
+            <!-- Galeria de Imagens -->
+            <div class="galeria">
+                <div class="imagem">
+                    <img src="https://via.placeholder.com/300x200.png?text=Brasil" alt="Brasil">
+                    <p>Brasil</p>
+                </div>
+                <div class="imagem">
+                    <img src="https://via.placeholder.com/300x200.png?text=Estados+Unidos" alt="Estados Unidos">
+                    <p>Estados Unidos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perguntas Frequentes -->
+    <section id="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-item" onclick="openFAQ('faq1')">
+                <h3>O que é uma matriz energética?</h3>
+                <p id="faq1" style="display:none;">A matriz energética é a distribuição das fontes de energia em um determinado território ou país.</p>
+            </div>
+            <div class="faq-item" onclick="openFAQ('faq2')">
+                <h3>Quais são as fontes renováveis de energia?</h3>
+                <p id="faq2" style="display:none;">As fontes renováveis incluem energia solar, eólica, hidrelétrica, biomassa e geotérmica.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora Interativa -->
+    <section id="calculadora">
+        <div class="container">
+            <h2>Calculadora de Proporção Energética</h2>
+            <form id="energyForm">
+                <label for="solar">Energia Solar (%):</label>
+                <input type="number" id="solar" name="solar" max="100" required><br>
+                <label for="eolica">Energia Eólica (%):</label>
+                <input type="number" id="eolica" name="eolica" max="100" required><br>
+                <label for="hidreletrica">Energia Hidrelétrica (%):</label>
+                <input type="number" id="hidreletrica" name="hidreletrica" max="100" required><br><br>
+                <button type="submit">Calcular</button>
+            </form>
+            <div id="resultado"></div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Matrizes Energéticas | Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
